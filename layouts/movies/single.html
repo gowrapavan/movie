@@ -1,0 +1,87 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+    <title>{{ .Title }} - Gowra Streaming</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background for the body */
+            color: #ffffff; /* Default text color */
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        /* Article styling */
+        article {
+            max-width: 100%; /* Limit width for better readability */
+            width: 100%; /* Make it full width within the max limit */
+            margin: 20px auto; /* Center the article */
+            padding: 20px; /* Padding around the article */
+            background-color: #1e1e1e; /* Dark card background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            overflow: auto; /* Enable scrolling if content overflows */
+        }
+
+        /* Title styles */
+        h1 {
+            font-size: 32px; /* Larger title size */
+            color: #ffcc00; /* Highlight title color */
+            margin-bottom: 10px; /* Space below title */
+            text-align: center; /* Center align title */
+            overflow-wrap: break-word; /* Prevent overflow in narrow spaces */
+        }
+
+        /* Synopsis styling */
+        .synopsis {
+            font-size: 18px; /* Adjust font size for synopsis */
+            color: #dddddd; /* Slightly lighter text color */
+            margin-bottom: 20px; /* Space below synopsis */
+            text-align: center; /* Center align synopsis */
+        }
+
+        /* Content styling */
+        .content {
+            font-size: 16px; /* Base font size for content */
+            line-height: 1.6; /* Improve line spacing for readability */
+            color: #e0e0e0; /* Light color for content */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            article {
+                padding: 15px; /* Less padding on mobile */
+                width: 90%; /* Make article width responsive */
+            }
+
+            h1 {
+                font-size: 28px; /* Decrease title size on mobile */
+            }
+
+            .synopsis {
+                font-size: 16px; /* Decrease synopsis font size */
+            }
+
+            .content {
+                font-size: 14px; /* Decrease content font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>{{ .Title }}</h1>
+        <div class="synopsis">{{ .Params.synopsis }}</div>
+        <div class="content">{{ .Content | safeHTML }}</div> <!-- Render HTML safely -->
+    </article>
+</body>
+</html>
+{{ end }}

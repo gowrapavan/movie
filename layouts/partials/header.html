@@ -1,0 +1,133 @@
+<header>
+    <div class="header-container">
+        <h1 class="header-title">Gowra Streaming</h1>
+        <nav class="nav-buttons">
+            <button class="button"><a href="/">Home</a></button>
+            <button class="button"><a href="/movies/">Movies</a></button>
+            <button class="button"><a href="/about/">About</a></button>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* General body styling */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        min-height: 100vh; /* Ensures footer sticks to the bottom */
+        background-color: #121212; /* Dark background for the entire body */
+    }
+
+    /* Header styles */
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Title on the left and buttons on the right */
+        align-items: center;
+        padding: 20px 30px; /* Adjusted padding for better spacing */
+        background-color: #1e1e1e; /* Header background color */
+        color: #ddebf0; /* Header text color */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+    }
+
+    .header-title {
+        margin: 0;
+        font-size: 28px; /* Increased title size for better visibility */
+        font-weight: bold; /* Added bold style to the title */
+        color: #ffcc00; /* Highlight title color */
+    }
+
+    /* Navigation button styles */
+    .nav-buttons {
+        display: flex;
+        gap: 15px; /* Increased gap for better button separation */
+    }
+
+    .button {
+        border-radius: 8px;
+        width: 140px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        color: #20cf83; /* Button text color */
+        position: relative;
+        cursor: pointer;
+        font-weight: 700;
+        background-color: #2e2e2e; /* Button background color */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    }
+
+    .button:hover {
+        background-color: #3a3a3a; /* Button hover effect */
+        transform: translateY(-2px); /* Slight lift on hover */
+    }
+
+    /* Button animation background */
+    .button:before {
+        content: '';
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        border-radius: 20px;
+        background: linear-gradient(45deg, #141414, #1b1b1b, #2e2e2e);
+        background-size: 400%;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        z-index: -1;
+        animation: steam 15s linear infinite;
+    }
+
+    @keyframes steam {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    .button:after {
+        filter: blur(70px);
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #1e1e1e; /* Footer background color */
+        color: #ddebf0; /* Footer text color */
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto; /* Ensures footer is at the bottom */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column; /* Stack header elements */
+            align-items: center; /* Center elements */
+        }
+
+        .nav-buttons {
+            justify-content: center; /* Center buttons in mobile view */
+            margin-top: 10px; /* Space between title and buttons */
+        }
+
+        .header-title {
+            font-size: 24px; /* Decrease title size on mobile */
+        }
+
+        .button {
+            width: 100%; /* Make buttons full-width on mobile */
+            padding: 10px; /* Adjust padding for mobile buttons */
+            max-width: 200px; /* Limit maximum width */
+            margin: 5px 0; /* Add margin between buttons in mobile view */
+        }
+    }
+</style>
