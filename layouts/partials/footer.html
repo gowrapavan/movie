@@ -1,25 +1,31 @@
 <footer>
     <p>&copy; {{ now.Format "2006" }} Gowra Streaming. All rights reserved.</p>
 </footer>
+
 <style>
     /* Footer styles */
-footer {
-    background-color: #1e1e1e; /* Dark background color */
-    color: #ddebf0; /* Light text color */
-    text-align: center; /* Center align text */
-    padding: 10px 0; /* Vertical padding for spacing */
-    margin-top: auto; /* Pushes footer to the bottom */
-    position: relative; /* Necessary for stacking context */
-    width: 100%; /* Ensures the footer spans the full width */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
-}
-
-/* Responsive text size for footer */
-@media (max-width: 768px) {
     footer {
-        font-size: 14px; /* Decrease font size on mobile */
-        padding: 8px 0; /* Adjust padding for smaller screens */
+        background-color: #1e1e1e; /* Dark background color */
+        color: #ddebf0; /* Light text color */
+        text-align: center; /* Center align text */
+        padding: 15px 0; /* Increased padding for consistency with header */
+        margin-top: auto; /* Pushes footer to the bottom */
+        position: relative;
+        width: 100%; /* Ensures full width */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+        font-family: Arial, sans-serif; /* Consistent font family */
     }
-}
 
+    footer p {
+        margin: 0;
+        font-size: 16px; /* Matching header font size */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        footer {
+            font-size: 14px;
+            padding: 10px 0;
+        }
+    }
 </style>

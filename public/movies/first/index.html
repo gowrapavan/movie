@@ -158,15 +158,37 @@
             font-family: Arial, sans-serif;
             background-color: #121212;  
             color: #ffffff;  
-            padding: 20px;
             display: flex;
             flex-direction: column;  
             align-items: center;  
+            min-height: 100vh;  
+        }
+
+         
+        header {
+            width: 100%;  
+            background-color: #1e1e1e;  
+            padding: 20px 0;  
+            text-align: center;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);  
+            margin-bottom: 20px;  
+        }
+
+         
+        footer {
+            width: 100%;  
+            background-color: #1e1e1e;  
+            color: #ddebf0;  
+            text-align: center;  
+            padding: 10px 0;  
+            position: relative;  
+            margin-top: auto;  
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);  
         }
 
          
         article {
-            max-width: 100%;  
+            max-width: 800px;  
             width: 100%;  
             margin: 20px auto;  
             padding: 20px;  
@@ -222,6 +244,10 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Gowra Streaming</h1>
+    </header>
+    
     <article>
         <h1>Gowra Streaming</h1>
         <div class="synopsis">An exciting adventure that takes you through the realms of imagination.</div>
@@ -230,7 +256,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowra Streaming</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -409,6 +434,10 @@
 </html>
 </div> 
     </article>
+
+    <footer>
+        <p>&copy; 2024 Gowra Streaming. All rights reserved.</p>
+    </footer>
 </body>
 </html>
  
@@ -416,27 +445,34 @@
     <footer>
     <p>&copy; 2024 Gowra Streaming. All rights reserved.</p>
 </footer>
+
 <style>
      
-footer {
-    background-color: #1e1e1e;  
-    color: #ddebf0;  
-    text-align: center;  
-    padding: 10px 0;  
-    margin-top: auto;  
-    position: relative;  
-    width: 100%;  
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);  
-}
-
- 
-@media (max-width: 768px) {
     footer {
-        font-size: 14px;  
-        padding: 8px 0;  
+        background-color: #1e1e1e;  
+        color: #ddebf0;  
+        text-align: center;  
+        padding: 15px 0;  
+        margin-top: auto;  
+        position: relative;
+        width: 100%;  
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);  
+        font-family: Arial, sans-serif;  
     }
-}
 
-</style> 
+    footer p {
+        margin: 0;
+        font-size: 16px;  
+    }
+
+     
+    @media (max-width: 768px) {
+        footer {
+            font-size: 14px;
+            padding: 10px 0;
+        }
+    }
+</style>
+ 
 </body>
 </html>

@@ -2,13 +2,13 @@
 title: "Gowra Streaming"
 params:
   synopsis: "An exciting adventure that takes you through the realms of imagination."
+image: "/images/my-first-movie-poster.jpg"  # Specify the path to the image here
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowra Streaming</title>
     <style>
         body {
             font-family: Arial, sans-serif;

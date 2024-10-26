@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50111&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet" href="http://localhost:1313/css/styles.css">
-    <script src="http://localhost:1313/js/scripts.js"></script>
+    <link rel="stylesheet" href="http://localhost:50111/css/styles.css">
+    <script src="http://localhost:50111/js/scripts.js"></script>
 </head>
 <body>
     <header>
     <div class="header-container">
         <h1 class="header-title">Gowra Streaming</h1>
         <nav class="nav-buttons">
-            <button class="button"><a href="/">Home</a></button><br>
-
-
+            <button class="button"><a href="/">Home</a></button>
             <button class="button"><a href="/movies/">Movies</a></button>
             <button class="button"><a href="/about/">About</a></button>
         </nav>
@@ -24,145 +22,126 @@
 <style>
      
     body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  
-}
-
- 
-.header-container {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1e1e1e;  
-    color: #ddebf0;  
-}
-
-.header-title {
-    margin: 0;
-    font-size: 24px;  
-}
-
- 
-.nav-buttons {
-    display: flex;
-    gap: 10px;  
-}
-
-  .button {
-    --black: #000000;
-    --ch-black: #141414;
-    --eer-black: #1b1b1b;
-    --night-rider: #2e2e2e;
-    --white: #ffffff;
-    --af-white: #f3f3f3;
-    --ch-white: #15b42d;
-    border-radius: 8px;
-    width: 140px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 0px 15px;
-    border: none;
-    color: rgb(20, 207, 83);
-    position: relative;
-    cursor: pointer;
-    font-weight: 700;
-    transition-duration: .0s;
-    background-color: var(--ch-black);
-  }
-  
-  .button:before, .button:after {
-    content: '';
-    position: absolute;
-    left: -3px;
-    top: -3px;
-    border-radius: 20px;
-    background: linear-gradient(45deg, 
-    var(--ch-black), var(--eer-black),
-    var(--night-rider), var(--ch-white), var(--night-rider), 
-      var(--eer-black), var(--ch-black),var(--ch-black));
-    background-size: 400%;
-    width: calc(100% + 4px);
-    height: calc(100% + 7px);
-    z-index: -1;
-    animation: steam 15s linear infinite;
-  }
-  
-  @keyframes steam {
-    0% {
-      background-position: 0 0;
-    }
-  
-    50% {
-      background-position: 400% 0;
-    }
-  
-    100% {
-      background-position: 0 0;
-    }
-  }
-  
-  .button:after {
-    filter: blur(70px);
-  }
-
-@keyframes steam {
-    0% {
-        background-position: 0 0;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        min-height: 100vh;  
+        background-color: #121212;  
     }
 
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
-}
-
-.button:after {
-    filter: blur(70px);
-}
-
- 
-footer {
-    background-color: #1e1e1e;  
-    color: #ddebf0;  
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;  
-}
-
- 
-@media (max-width: 768px) {
+     
     .header-container {
-        flex-direction: column;  
-        align-items: center;  
-    }
-
-    .nav-buttons {
-        justify-content: center;  
-        margin-top: 10px;  
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;
+        padding: 20px 30px;  
+        background-color: #1e1e1e;  
+        color: #ddebf0;  
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);  
     }
 
     .header-title {
-        font-size: 20px;  
+        margin: 0;
+        font-size: 28px;  
+        font-weight: bold;  
+        color: #ffcc00;  
+    }
+
+     
+    .nav-buttons {
+        display: flex;
+        gap: 15px;  
     }
 
     .button {
-        width: 100%;  
-        padding: 10px;  
-        max-width: 150px;  
-        margin: 5px 0;  
+        border-radius: 8px;
+        width: 140px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        color: #20cf83;  
+        position: relative;
+        cursor: pointer;
+        font-weight: 700;
+        background-color: #2e2e2e;  
+        transition: background-color 0.3s, transform 0.3s;  
     }
-}
-</style> 
+
+    .button:hover {
+        background-color: #3a3a3a;  
+        transform: translateY(-2px);  
+    }
+
+     
+    .button:before {
+        content: '';
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        border-radius: 20px;
+        background: linear-gradient(45deg, #141414, #1b1b1b, #2e2e2e);
+        background-size: 400%;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        z-index: -1;
+        animation: steam 15s linear infinite;
+    }
+
+    @keyframes steam {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    .button:after {
+        filter: blur(70px);
+    }
+
+     
+    footer {
+        background-color: #1e1e1e;  
+        color: #ddebf0;  
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto;  
+    }
+
+     
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;  
+            align-items: center;  
+        }
+
+        .nav-buttons {
+            justify-content: center;  
+            margin-top: 10px;  
+        }
+
+        .header-title {
+            font-size: 24px;  
+        }
+
+        .button {
+            width: 100%;  
+            padding: 10px;  
+            max-width: 200px;  
+            margin: 5px 0;  
+        }
+    }
+</style>
+ 
     <main>
         
 <h1>Terms</h1>
@@ -174,27 +153,34 @@ footer {
     <footer>
     <p>&copy; 2024 Gowra Streaming. All rights reserved.</p>
 </footer>
+
 <style>
      
-footer {
-    background-color: #1e1e1e;  
-    color: #ddebf0;  
-    text-align: center;  
-    padding: 10px 0;  
-    margin-top: auto;  
-    position: relative;  
-    width: 100%;  
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);  
-}
-
- 
-@media (max-width: 768px) {
     footer {
-        font-size: 14px;  
-        padding: 8px 0;  
+        background-color: #1e1e1e;  
+        color: #ddebf0;  
+        text-align: center;  
+        padding: 15px 0;  
+        margin-top: auto;  
+        position: relative;
+        width: 100%;  
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);  
+        font-family: Arial, sans-serif;  
     }
-}
 
-</style> 
+    footer p {
+        margin: 0;
+        font-size: 16px;  
+    }
+
+     
+    @media (max-width: 768px) {
+        footer {
+            font-size: 14px;
+            padding: 10px 0;
+        }
+    }
+</style>
+ 
 </body>
 </html>

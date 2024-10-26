@@ -12,7 +12,7 @@
       <link>http://localhost:1313/movies/first/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/movies/first/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Gowra Streaming&#xD;Search for Movie Ratings&#xD;To ensure accurate results, please use the exact IMDb name of the movie or series you want to watch. Enjoy your streaming experience!&#xA;Search&#xD;</description>
+      <description>&lt;!DOCTYPE html&gt;&#xD;Search for Movie Ratings&#xD;To ensure accurate results, please use the exact IMDb name of the movie or series you want to watch. Enjoy your streaming experience!&#xA;Search&#xD;</description>
     </item>
   </channel>
 </rss>

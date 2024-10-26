@@ -13,15 +13,37 @@
             font-family: Arial, sans-serif;
             background-color: #121212; /* Dark background for the body */
             color: #ffffff; /* Default text color */
-            padding: 20px;
             display: flex;
             flex-direction: column; /* Stack elements vertically */
             align-items: center; /* Center items horizontally */
+            min-height: 100vh; /* Ensure the body covers full height */
+        }
+
+        /* Header styling */
+        header {
+            width: 100%; /* Full width */
+            background-color: #1e1e1e; /* Dark header background */
+            padding: 20px 0; /* Padding for header */
+            text-align: center; /* Center align header text */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            margin-bottom: 20px; /* Space below header */
+        }
+
+        /* Footer styling */
+        footer {
+            width: 100%; /* Full width */
+            background-color: #1e1e1e; /* Dark footer background */
+            color: #ddebf0; /* Light text color */
+            text-align: center; /* Center align text */
+            padding: 10px 0; /* Vertical padding for spacing */
+            position: relative; /* Necessary for stacking context */
+            margin-top: auto; /* Pushes footer to the bottom */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
         }
 
         /* Article styling */
         article {
-            max-width: 100%; /* Limit width for better readability */
+            max-width: 800px; /* Limit width for better readability */
             width: 100%; /* Make it full width within the max limit */
             margin: 20px auto; /* Center the article */
             padding: 20px; /* Padding around the article */
@@ -77,11 +99,19 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Gowra Streaming</h1>
+    </header>
+    
     <article>
         <h1>{{ .Title }}</h1>
         <div class="synopsis">{{ .Params.synopsis }}</div>
         <div class="content">{{ .Content | safeHTML }}</div> <!-- Render HTML safely -->
     </article>
+
+    <footer>
+        <p>&copy; {{ now.Format "2006" }} Gowra Streaming. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 {{ end }}
